@@ -2567,52 +2567,36 @@
 						#header > nav ul li a.active {
 							background: #fff;
 							color: #4acaa8 !important;
-							width: 97%;
-							border-bottom-right-radius: 8%;
-							border-top-right-radius: 8%;
+							/* border-top-left-radius: 55px; */
 						}
+						
 						#header > nav ul li b:nth-child(1)
 						{
 							position: absolute;
-							width: 100%;
-							top: -20px;
-							height: 20px;
-							background: #fff;
 							display: none;
 						}
-
-						#header > nav ul li a.active b:nth-child(1)::before
+						#header > nav ul li b:nth-child(1)::before
 						{
 							content: '';
 							position: absolute;
-							top: 0;
-							border-top-left-radius: 20px;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: #4acaa8;
 						}
+
 						#header > nav ul li b:nth-child(2)
 						{
 							position: absolute;
-							width: 100%;
-							top: -20px;
-							height: 20px;
-							background: #fff;
 							display: none;
 						}
-
-						#header > nav ul li  a.active b:nth-child(2)::before
+						#header > nav ul li b:nth-child(2)::before
 						{
-							content: '';
 							position: absolute;
-							top: 0;
-							border-bottom-left-radius: 20px;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: #4acaa8;
-						}
+							content: '';
+						}	
+
+						#header > nav ul li a.active ~ b:nth-child(1),
+						#header > nav ul li a.active ~ b:nth-child(2)
+						{
+							display: block;
+						} 
 					#header > nav ul li:first-child {
 						border-top: 0;
 					}
@@ -3144,3 +3128,24 @@
 	{
 		background-color: transparent;
 	}
+
+
+	/* New Code Introduction Table */
+
+	table.introduction {
+		border-collapse: unset;
+	}
+	table.introduction > tbody > tr {
+			background-color: transparent;
+	}
+	table.introduction > tbody > tr > td {
+		padding: 0.5em 0.5em;
+	 }
+ 
+	 /* SVG Icons */
+
+	 .svgIcon {
+		width: 16px !important;
+		height: 16px !important;
+		vertical-align: middle !important;
+	 }
