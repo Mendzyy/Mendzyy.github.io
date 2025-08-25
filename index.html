@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Chirag M. — IT Services</title>
+  <meta name="description"
+    content="Web, mobile, and SAP solutions: Ionic, Angular, Vue, SAP UI5/Fiori/ABAP, CAP, Managed IT & DevOps." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="Chirag logo" class="logo" width="28" height="28" />
+        <span>Chirag M. — IT Services</span>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <!-- <a href="#contact">Contact</a> -->
+      </nav>
+      <div class="header-controls">
+        <a class="btn desktop-only" href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">
+            <span>✕</span>
+          </button>
+        </div>
+        <div class="mobile-nav">
+          <a href="#services" class="mobile-nav-link">Services</a>
+          <a href="#process" class="mobile-nav-link">Process</a>
+          <a href="#work" class="mobile-nav-link">Work</a>
+          <!-- <a href="#contact" class="mobile-nav-link">Contact</a> -->
+        </div>
+        <div class="mobile-menu-footer">
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container grid g-2" id="top">
+      <div>
+        <h1 class="title reveal">Build <span class="underline">clean apps</span> that drive business outcomes</h1>
+        <p class="subtitle reveal">I design, build, and operate modern web, mobile, and SAP solutions with a focus on
+          velocity, reliability, and ROI.</p>
+        <div class="pills reveal" style="margin:16px 0 24px">
+          <span class="pill">💻 Web & Mobile</span>
+          <span class="pill">🧩 SAP UI5 / Fiori / ABAP</span>
+          <span class="pill">☁️ Managed IT & DevOps</span>
+        </div>
+        <div class="cta-row reveal">
+          <a class="btn outline" href="#contact">Book a call</a>
+        </div>
+        <div class="muted trust-row reveal">⭐ Trusted by startups & SMEs in EU & India</div>
+      </div>
+      <div class="reveal">
+        <div class="card">
+          <div class="body">
+            <h3 style="margin:0 0 10px">What I usually deliver</h3>
+            <div class="grid g-2">
+              <div>
+                <div class="list">
+                  <li><span class="check">✔</span>
+                    <div><strong>Frictionless UX</strong><br><span class="muted">Fast, offline-first interfaces.</span>
+                    </div>
+                  </li>
+                  <li><span class="check">✔</span>
+                    <div><strong>Security by default</strong><br><span class="muted">Auth, RBAC, GDPR-ready.</span>
+                    </div>
+                  </li>
+                </div>
+              </div>
+              <div>
+                <div class="list">
+                  <li><span class="check">✔</span>
+                    <div><strong>Solid architecture</strong><br><span class="muted">Modular & scalable.</span></div>
+                  </li>
+                  <li><span class="check">✔</span>
+                    <div><strong>Measurable impact</strong><br><span class="muted">Metrics & monitoring.</span></div>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="title center reveal">Services</h2>
+      <p class="subtitle center reveal">Productized offerings for faster decisions and predictable outcomes.</p>
+      <div class="grid g-3">
+        <div class="card reveal">
+          <div class="body">
+            <h4>Web & Mobile Apps</h4>
+            <p class="muted">Ionic/Angular/Vue apps with offline-first UX, auth, payments, and clean CI/CD.</p>
+            <ul class="list">
+              <li><span class="check">✔</span>MVP in 2–6 weeks</li>
+              <li><span class="check">✔</span>Google/Apple OAuth</li>
+              <li><span class="check">✔</span>Offline & sync</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <h4>SAP UI5 / Fiori / ABAP</h4>
+            <p class="muted">Custom Fiori apps, CDS views, OData, CAP on BTP — performance tuned & secure.</p>
+            <ul class="list">
+              <li><span class="check">✔</span>Fiori Launchpad</li>
+              <li><span class="check">✔</span>CDS + OData</li>
+              <li><span class="check">✔</span>CAP services</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <h4>Managed IT & DevOps</h4>
+            <p class="muted">Monitoring, backups, security hardening, release automation, and cloud ops.</p>
+            <ul class="list">
+              <li><span class="check">✔</span>CI/CD</li>
+              <li><span class="check">✔</span>Security & backups</li>
+              <li><span class="check">✔</span>SLA-driven</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <h2 class="title center reveal">How We Work</h2>
+      <p class="subtitle center reveal">A lightweight, transparent delivery model.</p>
+      <div class="grid g-3 cols-5">
+        <div class="step reveal">
+          <div class="icon">✨</div>
+          <div><strong>1. Discovery</strong>
+            <div class="muted">Goals, risks, constraints.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="icon">🧩</div>
+          <div><strong>2. Design</strong>
+            <div class="muted">Journeys, architecture, backlog.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="icon">🛠️</div>
+          <div><strong>3. Build</strong>
+            <div class="muted">Iterative delivery with demos.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="icon">📈</div>
+          <div><strong>4. Optimize</strong>
+            <div class="muted">Performance & security.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="icon">🛡️</div>
+          <div><strong>5. Operate</strong>
+            <div class="muted">Monitoring, SLAs, improvement.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Case studies -->
+  <section id="work">
+    <div class="container">
+      <h2 class="title center reveal">Freelance Projects</h2>
+      <p class="subtitle center reveal">A selection of impactful freelance work delivered for global clients.</p>
+      <div class="grid g-3">
+        <div class="card reveal">
+          <div class="body">
+            <h4>Legacy App Modernization</h4>
+            <p class="muted">Ionic 4 Cordova to Capacitor migration with Android best practices</p>
+            <p><strong>Problem:</strong> Outdated Ionic 4 app needed updates but used legacy Cordova plugins and packaging.</p>
+            <p><strong>Solution:</strong> Complete migration to Capacitor with updated plugins, permissions, and modern Android build practices.</p>
+            <p><strong>Impact:</strong> App successfully updated and deployed to Google Play Store with improved performance and maintainability.</p>
+            <button class="btn work-card-btn" data-work="1">View Gallery</button>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <h4>Cybersecurity Extension for SAP</h4>
+            <p class="muted">Freelance SAP UI5 development for Layer Seven Security</p>
+            <p><strong>Problem:</strong> Needed to enhance and maintain custom SAP Fiori applications for advanced cybersecurity monitoring.</p>
+            <p><strong>Solution:</strong> Delivered new features, ongoing support, and performance improvements for SAP UI5/Fiori apps, ensuring robust security and compliance.</p>
+            <p><strong>Impact:</strong> Enabled real-time threat detection and streamlined security operations for SAP environments.</p>
+            <button class="btn work-card-btn" data-work="2">View Gallery</button>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <h4>Mobile App Revamp & Release</h4>
+            <p class="muted">Ionic app upgrade, rebuild, and redesign for improved reliability</p>
+            <p><strong>Problem:</strong> Legacy Ionic app was unmaintainable due to outdated dependencies and build errors.</p>
+            <p><strong>Solution:</strong> Upgraded source code, resolved npm issues, rebuilt for iOS/Android, published to Play Store and App Store, and delivered step-by-step documentation.</p>
+            <p><strong>Impact:</strong> App is now maintainable, up-to-date, and features a fresh redesign for better user experience.</p>
+            <button class="btn work-card-btn" data-work="3">View Gallery</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech stack -->
+  <section id="stack">
+    <div class="container">
+      <h2 class="title center reveal">Tech Stack</h2>
+      <p class="subtitle center reveal">Modern, proven tools for fast delivery and long-term maintainability.</p>
+      <div class="chips">
+        <span class="pill">Ionic</span>
+        <span class="pill">Angular</span>
+        <span class="pill">Vue</span>
+        <span class="pill">Capacitor</span>
+        <span class="pill">Firebase</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">SAP UI5</span>
+        <span class="pill">Fiori</span>
+        <span class="pill">ABAP</span>
+        <span class="pill">CDS Views</span>
+        <span class="pill">BTP</span>
+        <span class="pill">CAP</span>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="title center reveal">What Clients Say</h2>
+      <p class="subtitle center reveal">References available on request.</p>
+      <div class="grid g-3">
+        <div class="card reveal">
+          <div class="body">
+            <p class="italic">“Chirag expertise and attention to detail have been evident throughout the task, and the
+              results have exceeded our expectations.
+              Technical skills are truly impressive, and ability to problem-solve effectively was instrumental in
+              achieving our goals.”</p>
+            <div class="muted mt8">— Elnur J</div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <p class="italic">“"Chirag was the perfect freelancer for the task I required - a short bit of debugging and
+              sense-checking for Ionic Capacitor. I will not only recommend him, I will almost certainly need him again
+              in the future. Great work and communication.”</p>
+            <div class="muted mt8">— Jerome J., Iterative Impact</div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <p class="italic">“Chirag was easy to work with and delivered great work”</p>
+            <div class="muted mt8">— Aman D., Layer Seven Security</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container grid g-2">
+      <div class="card reveal">
+        <div class="body">
+          <h3>Let’s talk</h3>
+          <p class="muted">Tell me about your goals. I’ll respond within one business day.</p>
+          <form id="contact-form"  action="https://formspree.io/f/mzzapqrl" method="POST">
+            <div class="grid g-2">
+              <div><input required placeholder="Your name" class="input" /></div>
+              <div><input placeholder="Company" class="input" name="company"/></div>
+            </div>
+            <div class="mt10"><input type="email" required placeholder="Email" class="input" name="email"/></div>
+            <div class="mt10"><textarea rows="6" placeholder="Project brief / goals" class="input" name="message"></textarea></div>
+            <div class="form-row">
+              <div class="muted small">By submitting you agree to a friendly follow-up email. No spam. &nbsp;</div>
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="grid g-2 reveal">
+        <div class="card">
+          <div class="body">
+            <div class="contact-item contact-row">
+              <img src="assets/logos/email.svg" alt="Email" class="contact-icon" width="40" height="40" />
+              <div class="contact-text">
+                <a class="muted" href="mailto:mendapara.chirag.ce@gmail.com">mendapara.chirag.ce@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="body">
+            <div class="contact-item contact-row">
+              <img src="assets/logos/phone.svg" alt="Phone" class="contact-icon" width="40" height="40" />
+              <div class="contact-text">
+                <a class="muted" href="tel:+4915905383441">+49 15905383441</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="body">
+            <div class="contact-item contact-row">
+              <img src="assets/logos/linkedin.svg" alt="LinkedIn" class="contact-icon" width="40" height="40" />
+              <div class="contact-text">
+                <a class="muted" href="https://linkedin.com/in/chiragmendapara" target="_blank"
+                  rel="noopener">Chirag Mendapara</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="body">
+            <div class="contact-item contact-row">
+              <img src="assets/logos/upwork.svg" alt="Upwork" class="contact-icon" width="40" height="40" />
+              <div class="contact-text">
+                <a class="muted" href="https://www.upwork.com/freelancers/~01eff0c1f31e6fe1aa" target="_blank"
+                  rel="noopener">Chirag M.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Chirag — IT Services. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Work Gallery Modal -->
+  <div id="work-modal" class="work-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Case Study Gallery</h3>
+        <button id="modal-close" class="modal-close" aria-label="Close modal">✕</button>
+      </div>
+      <div class="gallery-container">
+        <!-- Swiper main container -->
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper">
+            <!-- Slides will be injected here -->
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="modal-description">
+        <p id="modal-description-text">Detailed project information and screenshots</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper.js JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
