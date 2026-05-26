@@ -1,0 +1,146 @@
+.policy-page {
+  min-height: 100vh;
+}
+
+.policy-brand {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.policy-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.policy-hero {
+  padding: 88px 0 48px;
+  background:
+    radial-gradient(circle at top left, rgba(124, 140, 255, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(159, 242, 198, 0.12), transparent 30%);
+}
+
+.policy-kicker {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.policy-meta {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.policy-content-section {
+  padding-top: 32px;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.policy-toc {
+  position: sticky;
+  top: 88px;
+}
+
+.policy-toc .body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.policy-toc a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.policy-toc a:hover,
+.policy-article a:hover {
+  color: var(--accent);
+}
+
+.policy-article {
+  line-height: 1.7;
+}
+
+.policy-article h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.policy-article p {
+  color: var(--muted);
+}
+
+.policy-article a {
+  color: var(--primary);
+}
+
+.policy-section-block {
+  scroll-margin-top: 90px;
+  padding: 8px 0 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-section-block:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.policy-section-block ul {
+  color: var(--muted);
+  padding-left: 22px;
+}
+
+.policy-section-block li {
+  margin: 10px 0;
+}
+
+.policy-note {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(124, 140, 255, 0.08);
+  padding: 14px 16px;
+}
+
+@media (max-width: 900px) {
+  .policy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-toc {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .policy-hero {
+    padding: 56px 0 32px;
+  }
+
+  .policy-links {
+    gap: 8px;
+  }
+
+  .policy-links a {
+    font-size: 13px;
+    margin: 0 4px;
+  }
+
+  .policy-article h2 {
+    font-size: 21px;
+  }
+}
