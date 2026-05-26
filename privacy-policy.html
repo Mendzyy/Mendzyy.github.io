@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GermanVault — Privacy Policy</title>
   <style>
+    html { scroll-behavior: smooth; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -14,6 +15,68 @@
       padding: 48px 20px 96px;
     }
     .container { max-width: 800px; margin: 0 auto; }
+
+    /* ── Reading progress bar ── */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #4b9fff, #7ab4ff);
+      z-index: 1000;
+      transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ── Back-to-top button ── */
+    #back-to-top {
+      position: fixed;
+      bottom: 32px; right: 24px;
+      width: 40px; height: 40px;
+      background: rgba(75, 159, 255, 0.18);
+      border: 1px solid rgba(75, 159, 255, 0.35);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #back-to-top:hover {
+      background: rgba(75, 159, 255, 0.32);
+    }
+    #back-to-top svg { width: 16px; height: 16px; fill: #4b9fff; }
+
+    /* ── Section reveal animation ── */
+    .section-block {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .section-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Section headings animate in when scrolled into view */
+    h2.h2-animate {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    h2.h2-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     .header-flag { font-size: 2.6rem; margin-bottom: 12px; }
     h1 { font-size: 2rem; color: #fff; margin-bottom: 6px; letter-spacing: -0.3px; }
@@ -30,8 +93,16 @@
     .toc-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.09em; color: #6b8fcf; margin-bottom: 12px; }
     .toc ol { padding-left: 20px; column-count: 2; column-gap: 24px; }
     .toc li { font-size: 0.88rem; margin-bottom: 6px; break-inside: avoid; }
-    .toc a { color: #4b9fff; text-decoration: none; }
+    .toc a {
+      color: #4b9fff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
     .toc a:hover { text-decoration: underline; }
+    .toc a.toc-active {
+      color: #90c8ff;
+      font-weight: 600;
+    }
 
     h2 {
       font-size: 1.08rem;
@@ -39,6 +110,7 @@
       margin: 48px 0 14px;
       padding-left: 14px;
       border-left: 3px solid #4b9fff;
+      scroll-margin-top: 24px;
     }
     h3 { font-size: 0.96rem; color: #c0d8ff; margin: 20px 0 8px; }
     p { font-size: 0.93rem; color: #b8cef0; margin-bottom: 12px; }
@@ -114,11 +186,23 @@
     hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 48px 0; }
     .footer-note { font-size: 0.82rem; color: #3d5070; line-height: 1.6; margin-top: 12px; }
     @media (max-width: 560px) { .toc ol { column-count: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .section-block { opacity: 1; transform: none; transition: none; }
+      h2.h2-animate { opacity: 1; transform: none; transition: none; }
+      #progress-bar { transition: none; }
+      #back-to-top { transition: none; }
+    }
   </style>
 </head>
 <body>
+<div id="progress-bar"></div>
+<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
 <div class="container">
 
+  <div class="section-block visible">
   <div class="header-flag">🇩🇪</div>
   <h1>Privacy Policy</h1>
   <p class="subtitle">GermanVault — Learn German</p>
@@ -128,7 +212,7 @@
   </p>
 
   <p>
-    This Privacy Policy describes how <strong>[YOUR FULL LEGAL NAME / COMPANY NAME]</strong>
+    This Privacy Policy describes how <strong>Hyb-Falcon Digital/Chirag Mendapara</strong>
     ("we", "our", or "us"), the developer of GermanVault, collects, uses, stores, and shares
     information when you use the GermanVault Android application
     (<code>com.mendzyy.germanvault</code>). It also explains your rights and how to exercise them.
@@ -140,7 +224,9 @@
     policy, please do not use GermanVault.
   </p>
 
-  <div class="toc">
+  </div><!-- /.section-block (intro) -->
+
+  <div class="toc section-block visible">
     <div class="toc-title">Contents</div>
     <ol>
       <li><a href="#s1">Who we are (Data Controller)</a></li>
@@ -162,7 +248,7 @@
       <li><a href="#s17">Changes to this policy</a></li>
       <li><a href="#s18">Contact and complaints</a></li>
     </ol>
-  </div>
+  </div><!-- /.toc -->
 
   <!-- 1 -->
   <h2 id="s1">1. Who We Are (Data Controller)</h2>
@@ -794,5 +880,86 @@
   </p>
 
 </div>
+
+<script>
+  // Reading progress bar
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+
+  // Back-to-top button
+  const backToTop = document.getElementById('back-to-top');
+  function updateBackToTop() {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', function() {
+    updateProgress();
+    updateBackToTop();
+    updateScrollSpy();
+  }, { passive: true });
+
+  // Section heading reveal via IntersectionObserver
+  const headings = document.querySelectorAll('h2');
+  headings.forEach(function(h) { h.classList.add('h2-animate'); });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    headings.forEach(function(h) { revealObserver.observe(h); });
+
+    // Also observe section-block elements that start hidden
+    document.querySelectorAll('.section-block:not(.visible)').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    // Fallback: make everything visible immediately
+    headings.forEach(function(h) { h.classList.add('visible'); });
+    document.querySelectorAll('.section-block').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  // Scroll-spy: highlight active TOC link
+  const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+  const sectionIds = Array.from(tocLinks).map(function(a) {
+    return a.getAttribute('href').slice(1);
+  });
+
+  function updateScrollSpy() {
+    let currentId = sectionIds[0];
+    const scrollY = window.scrollY + 80;
+    sectionIds.forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) {
+        currentId = id;
+      }
+    });
+    tocLinks.forEach(function(a) {
+      if (a.getAttribute('href') === '#' + currentId) {
+        a.classList.add('toc-active');
+      } else {
+        a.classList.remove('toc-active');
+      }
+    });
+  }
+
+  updateScrollSpy();
+</script>
 </body>
 </html>
